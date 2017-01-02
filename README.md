@@ -19,4 +19,11 @@ The CLDC library contains a minimum useful set of APIs that support application 
 JAD: Java Application Descriptor   
 *	MIDlet-Name*	MIDlet-Version*	MIDlet-Vendor*	MIDlet-<n> for each MIDlet*	MIDlet-Jar-URL*	MIDlet-Jar-Size## Explain the usage of Obfuscating the MIDlet.Obfuscation refers to the process of reducing the size of the Java byte code of a MIDlet application. Obfuscation helps in reducing the time required to download the MIDlet application in a mobile device. It also helps in securing the Java source code of a MIDlet application.     
 The compiled class files of Java can be reverse engineered to produce the Java source files by using a tool called a decompiler. This is a threat to the Java source files. Obfuscation prevents this threat by preventing reverse engineering.     
-The Obfuscation process removes information such as comments, line numbers, and local variable names present in the Java source files. After this information is removed, any attempt at reverse engineering is not successful. This is because the information that is derived after decompiling the Java source files becomes very difficult to understand. 
+The Obfuscation process removes information such as comments, line numbers, and local variable names present in the Java source files. After this information is removed, any attempt at reverse engineering is not successful. This is because the information that is derived after decompiling the Java source files becomes very difficult to understand. ## List the differences between KVM and JVM
+Java Language Features | KVM | JVM
+-----------------------|-----|----
+Java Native Interface (JNI) | Does not support JNI. | Supports JNI Includes features to reduce the cost of implementation of virtual machine.
+Thread groups|Does not support thread groups. Thread operations, such as starting and stopping a thread, can only be applied to individual thread objects. |Supports thread groups.
+Reflection features | Does not support reflection features. Reflection features help you to inspect the number and content of classes, such as objects, methods, fields, threads, and other runtime structures in the virtual machine. | Supports reflection features.
+Class file verification | Performs class verification in two steps, preverification and in-device verification. Preverification is performed before downloading a class file into a mobile device. In‑device verification occurs after preverification is completed. | Performs class verification only once, during compilation of Java classes.
+
