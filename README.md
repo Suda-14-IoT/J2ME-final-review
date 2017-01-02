@@ -26,4 +26,11 @@ Java Native Interface (JNI) | Does not support JNI. | Supports JNI Includes feat
 Thread groups|Does not support thread groups. Thread operations, such as starting and stopping a thread, can only be applied to individual thread objects. |Supports thread groups.
 Reflection features | Does not support reflection features. Reflection features help you to inspect the number and content of classes, such as objects, methods, fields, threads, and other runtime structures in the virtual machine. | Supports reflection features.
 Class file verification | Performs class verification in two steps, preverification and in-device verification. Preverification is performed before downloading a class file into a mobile device. In‑device verification occurs after preverification is completed. | Performs class verification only once, during compilation of Java classes.
-
+## List the requirements of CLDC specification.*	160 KB of non-volatile memory for the virtual machine and CLDC libraries(ROM)*	32 KB of volatile memory for the virtual machine(RAM)*	16-bit or 32-bit processor *	Wireless network connection of limited bandwidth, such as Bluetooth and GPRS## Explain all the classes derived from the Screen Class. 
+* Textbox 
+* List
+* Alert
+* Form -> Item -> ...
+
+## Explain states of the Life Cycle of MIDlet*	Active state: Indicates the state when a MIDlet initially starts after it is launched by the AMS. This state is defined by the startApp() method of the MIDlet class.*	Paused state: Indicates the state when a MIDlet is stopped temporarily. This state is defined by the pauseApp() method of the MIDlet class.*	Destroyed state: Indicates the state when a MIDlet is permanently destroyed from the mobile device. When a MIDlet is destroyed, it cannot be reused. This state is defined by the destroyApp() method of the MIDlet class.##  Explain all the three attributes of Command class.Method | Description
+-------| ----------GetCommandType()|Returns an int value to indicate the type attribute of the current Command object.getLabel()|Returns the label of the Command object.getLongLabel()|Returns the long label of the Command object. Long label provides additional information, such as the function of the Command object.getPriority()|Returns an int value to specify the priority of the Command object. 
